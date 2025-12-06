@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
     
     <div class="block lg:hidden absolute inset-0 z-0">
       <img src="/hero-mobile.jpg" alt="Naim Afgan" class="h-full w-full object-cover object-top" />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
     </div>
 
     <div class="hidden lg:block absolute inset-0 z-0">
@@ -24,15 +24,12 @@ import Layout from '../layouts/Layout.astro';
     </nav>
 
     <div class="absolute inset-0 z-10 flex flex-col justify-end pb-24 lg:justify-center lg:items-end lg:pr-32 lg:pb-0 overflow-hidden">
-      
       <div class="relative flex flex-col items-center w-full lg:w-auto">
-        
         <img 
           src="/logo-name.png" 
           alt="NAIM AFGAN" 
           class="animate-slide-left w-4/5 md:w-2/3 lg:w-auto lg:h-[16rem] mb-2 lg:mb-4 object-contain will-change-transform"
         />
-
         <div class="absolute top-full left-1/2 -translate-x-1/2 w-max mt-2">
           <p 
             id="decode-text" 
@@ -42,13 +39,11 @@ import Layout from '../layouts/Layout.astro';
             AI STRATEGY & TRANSFORMATION PARTNER
           </p>
         </div>
-
       </div>
     </div>
+  </main>
 
-    </main>
-
-  <section id="bento" class="bg-black py-20 px-4 md:px-8 relative z-30">
+  <section id="bento" class="bg-black py-20 px-4 md:px-8 relative z-30 border-b border-white/10">
     <div class="max-w-7xl mx-auto">
       
       <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 text-center">
@@ -59,26 +54,30 @@ import Layout from '../layouts/Layout.astro';
         
         <div class="md:col-span-2 bg-neutral-900 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group relative overflow-hidden">
           <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+          
           <h3 class="text-2xl font-bold text-white mb-4">Strategic Vision</h3>
+          
           <p class="text-neutral-400 leading-relaxed text-lg">
-            I help organizations navigate the complex landscape of Artificial Intelligence. 
-            From identifying high-impact use cases to implementing scalable solutions, 
-            my focus is on tangible business results, not just hype.
+            I help organizations harness the power of AI for growth without losing their authentic culture. 
+            I guide teams through a structured journey of AI adoption that turns complex strategy into measurable results.
           </p>
-          <div class="mt-8 flex gap-4">
-             <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20">Strategy</span>
-             <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20">Automation</span>
-             <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20">Leadership</span>
+          
+          <div class="mt-8 flex flex-wrap gap-2 sm:gap-4">
+             <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20 whitespace-nowrap">Strategy</span>
+             <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20 whitespace-nowrap">Culture</span>
+             <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20 whitespace-nowrap">Human-Centric AI</span>
           </div>
         </div>
 
         <div class="bg-neutral-900 border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-orange-500/50 transition-colors group">
           <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-lg flex items-center justify-center mb-4 text-black font-bold text-xl">
-             in
+              in
           </div>
           <div>
-            <h3 class="text-xl font-bold text-white">Connect</h3>
-            <p class="text-neutral-500 mt-2 text-sm">Follow my latest thoughts on AI trends and leadership.</p>
+             <h3 class="text-xl font-bold text-white">Connect</h3>
+             <p class="text-neutral-500 mt-2 text-sm">
+               Let's explore the human side of AI leadership together.
+             </p>
           </div>
           <a href="#" class="mt-4 text-orange-400 text-sm font-semibold hover:text-orange-300 flex items-center gap-2">
             LinkedIn Profile &rarr;
@@ -87,29 +86,164 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="md:row-span-2 bg-neutral-900 border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:border-orange-500/50 transition-colors relative overflow-hidden">
            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-orange-900/10"></div>
-           <span class="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-700">10+</span>
+           <span class="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-700">20+</span>
            <p class="text-xl text-orange-500 mt-4 font-medium">Years Experience</p>
-           <p class="text-neutral-500 mt-2 text-sm max-w-[200px]">Leading digital transformation and innovation projects.</p>
+           <p class="text-neutral-500 mt-4 text-sm max-w-[260px] leading-relaxed">
+             Leading complex, multi-million dollar projects and transformations for major international organisations.
+           </p>
         </div>
 
         <div class="md:col-span-2 bg-neutral-900 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group">
            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
              <span class="w-2 h-2 rounded-full bg-orange-500"></span> 
-             Latest Projects
+             Core Competencies
            </h3>
            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="bg-black/40 p-4 rounded-xl border border-white/5">
-                 <h4 class="text-white font-semibold">AI Governance Framework</h4>
-                 <p class="text-neutral-500 text-xs mt-1">Enterprise Policy Design</p>
+              <div class="bg-black/40 p-4 rounded-xl border border-white/5 hover:bg-white/5 transition-colors">
+                 <h4 class="text-white font-semibold">Stakeholder Management</h4>
+                 <p class="text-neutral-500 text-xs mt-1">C-Level Negotiation & Alignment</p>
               </div>
-              <div class="bg-black/40 p-4 rounded-xl border border-white/5">
-                 <h4 class="text-white font-semibold">LLM Integration</h4>
-                 <p class="text-neutral-500 text-xs mt-1">Custom Knowledge Base</p>
+              <div class="bg-black/40 p-4 rounded-xl border border-white/5 hover:bg-white/5 transition-colors">
+                 <h4 class="text-white font-semibold">Program Delivery</h4>
+                 <p class="text-neutral-500 text-xs mt-1">Complex Agile & Waterfall Hybrid</p>
               </div>
            </div>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-black py-20 px-4 md:px-8 relative z-30">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="mb-12">
+            <h2 class="text-3xl font-extrabold text-white">
+                Key Deliveries & Programs
+            </h2>
+            <p class="mt-2 text-lg text-neutral-400">
+                Selected track record of managing complex telecom implementations.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden lg:col-span-2 flex flex-col md:flex-row group hover:border-orange-500/50 transition-all duration-300 shadow-2xl shadow-black">
+                
+                <div class="relative w-full md:w-2/5 bg-neutral-800 overflow-hidden min-h-[250px]">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Wholesale Ecosystem" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 mix-blend-overlay">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent md:bg-gradient-to-r"></div>
+                    
+                    <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                        <p class="text-[10px] uppercase text-neutral-400 font-bold tracking-wider">Lead PM at</p>
+                        <p class="text-sm font-bold text-white">ZIRA</p>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-8 flex flex-col justify-between w-full md:w-3/5">
+                    
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-14 bg-purple-900/30 text-purple-400 border border-purple-500/30 flex items-center justify-center font-bold text-xs rounded">STC</div>
+                                <div class="h-8 w-px bg-white/10"></div>
+                                <span class="text-sm font-semibold text-neutral-300">Saudi Telecom</span>
+                            </div>
+                            <span class="bg-green-900/30 border border-green-500/30 text-green-400 text-xs px-2 py-1 rounded-full font-medium">Delivered</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                            Wholesale Business Support System
+                        </h3>
+                        
+                        <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                            Leading the end-to-end digital transformation of wholesale operations. Consolidating 3 legacy systems into a unified platform for <strong>Roaming, Interconnect & Settlement</strong>. Managed C-level stakeholders and 3rd party vendor integration.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-5">
+                        <div class="text-center md:text-left">
+                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                                Team
+                            </div>
+                            <div class="font-bold text-white">25+ People</div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Duration
+                            </div>
+                            <div class="font-bold text-white">3 Years</div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+                                Method
+                            </div>
+                            <div class="font-bold text-white">Hybrid Agile</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
+                <div class="relative h-48 bg-neutral-800">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=600" alt="Data" class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity">
+                    <div class="absolute top-3 right-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10">
+                        via ZIRA
+                    </div>
+                </div>
+                
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex items-center gap-3 mb-3">
+                         <div class="h-6 w-12 bg-pink-900/30 text-pink-400 border border-pink-500/30 flex items-center justify-center font-bold text-[10px] rounded">VIVA</div>
+                         <span class="text-xs text-neutral-400">Bahrain</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">
+                        Roaming Settlement
+                    </h3>
+                    <p class="text-neutral-400 text-xs mb-4 leading-relaxed">
+                        Implementation of TAP/RAP file processing modules. Ensuring compliance with GSMA standards and revenue assurance logic.
+                    </p>
+
+                    <div class="mt-auto pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">Waterfall</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">6 Months</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
+                <div class="relative h-48 bg-neutral-800">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" alt="Meeting" class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity">
+                    <div class="absolute top-3 right-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10">
+                        Internal
+                    </div>
+                </div>
+                
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex items-center gap-3 mb-3">
+                         <div class="h-6 w-12 bg-white/10 text-white border border-white/20 flex items-center justify-center font-bold text-[10px] rounded">OPS</div>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Process Optimization
+                    </h3>
+                    <p class="text-neutral-400 text-xs mb-4 leading-relaxed">
+                        Reorganization of internal task tracking workflows for 5 engineering teams. Introduced automated JIRA reporting for management.
+                    </p>
+
+                    <div class="mt-auto pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">Scrum</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">Internal</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
   </section>
 
@@ -162,7 +296,7 @@ import Layout from '../layouts/Layout.astro';
       
       iteration += 1 / 3; 
     }, 30); 
-  }
+  };
 
   setTimeout(() => {
     startDecodeEffect();
