@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BentoCard from '../components/BentoCard.astro';
 ---
 
 <Layout title="Naim Afgan | AI Strategy & Transformation">
   
   <main class="relative h-screen w-full overflow-hidden bg-black text-white">
     
+    {/* HERO SECTION */}
     <div class="block lg:hidden absolute inset-0 z-0">
       <img src="/hero-mobile.jpg" alt="Naim Afgan" class="h-full w-full object-cover object-top" />
       <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -31,6 +33,7 @@ import Layout from '../layouts/Layout.astro';
           class="animate-slide-left w-4/5 md:w-2/3 lg:w-auto lg:h-[16rem] mb-2 lg:mb-4 object-contain will-change-transform"
         />
         <div class="absolute top-full left-1/2 -translate-x-1/2 w-max mt-2">
+          {/* OVO JE TEKST KOJI JE NESTAO */}
           <p 
             id="decode-text" 
             data-value="AI STRATEGY & TRANSFORMATION PARTNER" 
@@ -43,7 +46,8 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </main>
 
-  <section id="bento" class="bg-black py-20 px-4 md:px-8 relative z-30 border-b border-white/10">
+  {/* BENTO GRID SECTION */}
+  <section id="bento" class="bg-black py-20 px-4 md:px-8 relative z-30">
     <div class="max-w-7xl mx-auto">
       
       <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 text-center">
@@ -52,11 +56,11 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
         
-        <div class="md:col-span-2 bg-neutral-900 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
-          
-          <h3 class="text-2xl font-bold text-white mb-4">Strategic Vision</h3>
-          
+        {/* 1. STRATEGIC VISION */}
+        <BentoCard 
+          title="Strategic Vision" 
+          class="md:col-span-2"
+        >
           <p class="text-neutral-400 leading-relaxed text-lg">
             I help organizations harness the power of AI for growth without losing their authentic culture. 
             I guide teams through a structured journey of AI adoption that turns complex strategy into measurable results.
@@ -67,38 +71,37 @@ import Layout from '../layouts/Layout.astro';
              <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20 whitespace-nowrap">Culture</span>
              <span class="px-4 py-2 bg-white/5 rounded-full text-sm text-orange-400 border border-orange-500/20 whitespace-nowrap">Human-Centric AI</span>
           </div>
-        </div>
+        </BentoCard>
 
-        <div class="bg-neutral-900 border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-orange-500/50 transition-colors group">
-          <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-lg flex items-center justify-center mb-4 text-black font-bold text-xl">
-              in
-          </div>
+        {/* 2. CONNECT */}
+        <BentoCard class="flex flex-col justify-between">
           <div>
-             <h3 class="text-xl font-bold text-white">Connect</h3>
-             <p class="text-neutral-500 mt-2 text-sm">
-               Let's explore the human side of AI leadership together.
-             </p>
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-lg flex items-center justify-center mb-4 text-black font-bold text-xl">
+                  in
+              </div>
+              <h3 class="text-xl font-bold text-white">Connect</h3>
+              <p class="text-neutral-500 mt-2 text-sm">
+                Let's explore the human side of AI leadership together.
+              </p>
           </div>
-          <a href="#" class="mt-4 text-orange-400 text-sm font-semibold hover:text-orange-300 flex items-center gap-2">
+          <a href="https://www.linkedin.com" target="_blank" class="mt-4 text-orange-400 text-sm font-semibold hover:text-orange-300 flex items-center gap-2">
             LinkedIn Profile &rarr;
           </a>
-        </div>
+        </BentoCard>
 
-        <div class="md:row-span-2 bg-neutral-900 border border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:border-orange-500/50 transition-colors relative overflow-hidden">
-           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-orange-900/10"></div>
+        {/* 3. EXPERIENCE STATS */}
+        <BentoCard class="md:row-span-2 flex items-center justify-center text-center">
+           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-orange-900/10 pointer-events-none"></div>
            <span class="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-700">20+</span>
            <p class="text-xl text-orange-500 mt-4 font-medium">Years Experience</p>
            <p class="text-neutral-500 mt-4 text-sm max-w-[260px] leading-relaxed">
              Leading complex, multi-million dollar projects and transformations for major international organisations.
            </p>
-        </div>
+        </BentoCard>
 
-        <div class="md:col-span-2 bg-neutral-900 border border-white/10 rounded-2xl p-8 hover:border-orange-500/50 transition-colors group">
-           <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
-             <span class="w-2 h-2 rounded-full bg-orange-500"></span> 
-             Core Competencies
-           </h3>
-           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* 4. CORE COMPETENCIES */}
+        <BentoCard title="Core Competencies" class="md:col-span-2">
+           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
               <div class="bg-black/40 p-4 rounded-xl border border-white/5 hover:bg-white/5 transition-colors">
                  <h4 class="text-white font-semibold">Stakeholder Management</h4>
                  <p class="text-neutral-500 text-xs mt-1">C-Level Negotiation & Alignment</p>
@@ -108,40 +111,98 @@ import Layout from '../layouts/Layout.astro';
                  <p class="text-neutral-500 text-xs mt-1">Complex Agile & Waterfall Hybrid</p>
               </div>
            </div>
-        </div>
+        </BentoCard>
+
+        {/* 5. TECH STACK & TOOLS (NOVO - Popunjava prazninu) */}
+        <BentoCard title="Tech Stack" class="md:col-span-2">
+           <div class="flex flex-col h-full justify-center">
+             <p class="text-neutral-500 text-sm mb-6">
+               Technologies and platforms I use to drive transformation.
+             </p>
+             
+             <div class="grid grid-cols-4 gap-4">
+                {/* SAP */}
+                <div class="flex flex-col items-center gap-2 group/icon">
+                    <div class="w-10 h-10 rounded-lg bg-blue-900/20 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover/icon:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+                    </div>
+                    <span class="text-[10px] text-neutral-400 font-medium">SAP ERP</span>
+                </div>
+
+                {/* JIRA/AGILE */}
+                <div class="flex flex-col items-center gap-2 group/icon">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-300 group-hover/icon:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-8.3a4 4 0 1 1 0-7.7"/><path d="M22 13.7v-1.4a4 4 0 1 0-4-3.6"/></svg>
+                    </div>
+                    <span class="text-[10px] text-neutral-400 font-medium">Jira / Agile</span>
+                </div>
+
+                {/* AI / LLMs */}
+                <div class="flex flex-col items-center gap-2 group/icon">
+                    <div class="w-10 h-10 rounded-lg bg-orange-500/20 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover/icon:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                    </div>
+                    <span class="text-[10px] text-neutral-400 font-medium">AI / LLM</span>
+                </div>
+
+                {/* ANALYTICS */}
+                <div class="flex flex-col items-center gap-2 group/icon">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover/icon:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <span class="text-[10px] text-neutral-400 font-medium">Analytics</span>
+                </div>
+             </div>
+           </div>
+        </BentoCard>
 
       </div>
     </div>
   </section>
 
+  {/* PROJECTS SECTION */}
   <section id="projects" class="bg-black py-20 px-4 md:px-8 relative z-30">
-    <div class="max-w-7xl mx-auto">
+    
+    {/* AMBIENT GLOW (Behind Header) */}
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-orange-600/20 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
         
-        <div class="mb-12">
+        <div class="mb-12 text-center md:text-left">
             <h2 class="text-3xl font-extrabold text-white">
                 Key Deliveries & Programs
             </h2>
-            <p class="mt-2 text-lg text-neutral-400">
-                Selected track record of managing complex telecom implementations.
+            <p class="mt-2 text-lg text-neutral-400 max-w-2xl">
+                Selected track record of delivering complex transformations across high-compliance industries.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden lg:col-span-2 flex flex-col md:flex-row group hover:border-orange-500/50 transition-all duration-300 shadow-2xl shadow-black">
+            {/* --- RED 1 --- */}
+
+            {/* 1. STC PROJECT CARD (Wide) */}
+            <div class="bg-neutral-900/80 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden lg:col-span-2 flex flex-col md:flex-row group hover:border-orange-500/50 transition-all duration-300 shadow-2xl shadow-black relative">
                 
-                <div class="relative w-full md:w-2/5 bg-neutral-800 overflow-hidden min-h-[250px]">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Wholesale Ecosystem" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 mix-blend-overlay">
-                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent md:bg-gradient-to-r"></div>
+                {/* AMBIENT GLOW: Purple */}
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-purple-600/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+
+                <div class="relative w-full md:w-2/5 overflow-hidden min-h-[250px]">
+                    <img src="/STC.webp" alt="Wholesale Ecosystem" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent md:bg-gradient-to-r"></div>
                     
-                    <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
-                        <p class="text-[10px] uppercase text-neutral-400 font-bold tracking-wider">Lead PM at</p>
+                    <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 shadow-lg">
+                        <p class="text-[10px] uppercase text-neutral-400 font-bold tracking-wider">PM at</p>
                         <p class="text-sm font-bold text-white">ZIRA</p>
+                    </div>
+
+                    <div class="absolute top-4 right-4 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex flex-col items-end shadow-lg">
+                        <p class="text-[10px] uppercase text-neutral-400 font-bold tracking-wider">Project Value</p>
+                        <p class="text-sm font-bold text-emerald-400">+$2.4M</p>
                     </div>
                 </div>
 
-                <div class="p-6 md:p-8 flex flex-col justify-between w-full md:w-3/5">
-                    
+                <div class="p-6 md:p-8 flex flex-col justify-between w-full md:w-3/5 relative z-10">
                     <div>
                         <div class="flex justify-between items-start mb-4">
                             <div class="flex items-center gap-3">
@@ -156,89 +217,251 @@ import Layout from '../layouts/Layout.astro';
                             Wholesale Business Support System
                         </h3>
                         
-                        <p class="text-neutral-400 text-sm leading-relaxed mb-6">
-                            Leading the end-to-end digital transformation of wholesale operations. Consolidating 3 legacy systems into a unified platform for <strong>Roaming, Interconnect & Settlement</strong>. Managed C-level stakeholders and 3rd party vendor integration.
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            Orchestrated the delivery of a next-generation Wholesale Business Support System. Streamlined operations through a complete <strong class="text-orange-400">Lead-to-Cash</strong> lifecycle transformation.
                         </p>
                     </div>
 
                     <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-5">
                         <div class="text-center md:text-left">
-                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                                Team
-                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">Team</div>
                             <div class="font-bold text-white">25+ People</div>
                         </div>
                         <div class="text-center md:text-left">
-                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                Duration
-                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">Duration</div>
                             <div class="font-bold text-white">3 Years</div>
                         </div>
                         <div class="text-center md:text-left">
-                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
-                                Method
-                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-1 text-xs text-neutral-500 font-medium uppercase tracking-wide mb-1">Method</div>
                             <div class="font-bold text-white">Hybrid Agile</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* 2. GAZPROM PROJECT CARD (Small) */}
+            <div class="bg-neutral-900/80 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden flex flex-col group hover:border-blue-500/50 transition-all duration-300 relative">
+                 
+                 {/* AMBIENT GLOW: Blue */}
+                 <div class="absolute -left-10 -bottom-10 w-48 h-48 bg-blue-600/20 rounded-full blur-[60px] pointer-events-none mix-blend-screen"></div>
+                
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/Gazprom.webp" alt="Gazprom Retail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-transparent to-transparent"></div>
+                    
+                    <div class="absolute top-3 left-3 bg-black/70 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10 shadow-lg">
+                        Project Manager
+                    </div>
+
+                    <div class="absolute top-3 right-3 bg-blue-900/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-blue-200 border border-blue-500/30 shadow-lg">
+                        +250 People Trained
+                    </div>
+                </div>
+                
+                <div class="p-6 flex-1 flex flex-col relative z-10">
+                    <div class="flex items-center gap-3 mb-3">
+                         <div class="h-6 w-20 bg-blue-600 text-white flex items-center justify-center font-bold text-[10px] rounded tracking-tighter">GAZPROM</div>
+                         <span class="text-xs text-neutral-400">Bosnia & Herzegovina</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        Post-Merger Integration
+                    </h3>
+                    
+                    <p class="text-neutral-300 text-xs mb-4 leading-relaxed">
+                        Led the operational integration of OMV assets into Gazprom. Established the <strong class="text-orange-400">Retail ecosystem & SAP ERP</strong> across 20+ locations.
+                    </p>
+
+                    <div class="mt-auto pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">SAP ERP</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">M&A</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* --- RED 2 --- */}
+
+            {/* 3. UKC SARAJEVO PROJECT CARD (Small) */}
+            <div class="bg-neutral-900/80 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden flex flex-col group hover:border-teal-500/50 transition-all duration-300 relative">
+                
+                {/* AMBIENT GLOW: Teal */}
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-teal-600/20 rounded-full blur-[60px] pointer-events-none mix-blend-screen"></div>
+
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/UKC.webp" alt="University Clinical Center" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-transparent to-transparent"></div>
+
+                    <div class="absolute top-3 right-3 bg-black/70 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10 shadow-lg">
+                        Project Manager
+                    </div>
+                     <div class="absolute bottom-3 left-3 bg-teal-900/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-teal-200 border border-teal-500/30 shadow-lg">
+                        €0.9M Value
+                    </div>
+                </div>
+                
+                <div class="p-6 flex-1 flex flex-col relative z-10">
+                    <div class="flex items-center gap-3 mb-3">
+                         <div class="h-6 w-12 bg-white/10 text-white border border-white/20 flex items-center justify-center font-bold text-[10px] rounded">UKC</div>
+                         <span class="text-xs text-neutral-400">Healthcare</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">
+                        Healthcare Transformation
+                    </h3>
+                    
+                    <p class="text-neutral-300 text-xs mb-4 leading-relaxed">
+                        Spearheaded the SAP ERP implementation across the University Clinical Center. Full-stack module integration for <strong class="text-orange-400">3,300+ staff</strong>.
+                    </p>
+
+                    <div class="mt-auto pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">SAP</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">3300+ Users</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* 4. USAID PRIVATIZATION PROJECT CARD (Wide) */}
+            <div class="bg-neutral-900/80 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden lg:col-span-2 flex flex-col md:flex-row group hover:border-blue-600/50 transition-all duration-300 shadow-2xl shadow-black relative">
+                 
+                 {/* AMBIENT GLOW: Blue/Indigo */}
+                 <div class="absolute -right-20 -top-20 w-80 h-80 bg-blue-700/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+
+                <div class="relative w-full md:w-2/5 overflow-hidden min-h-[250px]">
+                    <img src="/USAID.webp" alt="USAID Privatization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent md:bg-gradient-to-r"></div>
+                    
+                    <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 shadow-lg">
+                        <p class="text-[10px] uppercase text-neutral-400 font-bold tracking-wider">ICT Project Manager</p>
+                        <p class="text-sm font-bold text-white">USAID</p>
+                    </div>
+
+                    <div class="absolute top-4 right-4 bg-blue-900/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex flex-col items-end shadow-lg">
+                        <p class="text-[10px] uppercase text-blue-200 font-bold tracking-wider">Asset Value</p>
+                        <p class="text-sm font-bold text-white">9 Billion KM</p>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-8 flex flex-col justify-between w-full md:w-3/5 relative z-10">
+                    
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-16 bg-blue-900/30 text-blue-400 border border-blue-500/30 flex items-center justify-center font-bold text-xs rounded tracking-tighter">USAID</div>
+                                <div class="h-8 w-px bg-white/10"></div>
+                                <span class="text-sm font-semibold text-neutral-300">Government & Public Sector</span>
+                            </div>
+                            <span class="bg-blue-900/30 border border-blue-500/30 text-blue-400 text-xs px-2 py-1 rounded-full font-medium">National Scale</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                            National Privatization Program
+                        </h3>
+                        
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            Led the IT implementation for BiH's mass privatization under USAID. Managed systems processing <strong class="text-orange-400">9 Billion KM</strong> in state assets across <strong class="text-orange-400">1,000+ enterprises</strong>.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 pt-5">
+                        <div class="text-center md:text-left">
+                            <div class="text-[10px] text-neutral-500 font-medium uppercase tracking-wide mb-1">Scope</div>
+                            <div class="font-bold text-white text-sm">National</div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="text-[10px] text-neutral-500 font-medium uppercase tracking-wide mb-1">Entities</div>
+                            <div class="font-bold text-white text-sm">1,000+</div>
+                        </div>
+                         <div class="text-center md:text-left col-span-2 sm:col-span-2">
+                            <div class="text-[10px] text-neutral-500 font-medium uppercase tracking-wide mb-1">Focus</div>
+                            <div class="flex gap-2">
+                                <span class="px-2 py-0.5 bg-white/5 text-neutral-300 text-[10px] rounded border border-white/10">Policy</span>
+                                <span class="px-2 py-0.5 bg-white/5 text-neutral-300 text-[10px] rounded border border-white/10">Data</span>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
-                <div class="relative h-48 bg-neutral-800">
-                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=600" alt="Data" class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity">
-                    <div class="absolute top-3 right-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10">
-                        via ZIRA
+            {/* --- RED 3 --- */}
+
+            {/* 5. AUTHORITY PARTNERS (Small) */}
+            <div class="bg-neutral-900/80 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden flex flex-col group hover:border-indigo-500/50 transition-all duration-300 relative">
+                
+                {/* AMBIENT GLOW: Indigo */}
+                <div class="absolute -left-10 -bottom-10 w-48 h-48 bg-indigo-600/20 rounded-full blur-[60px] pointer-events-none mix-blend-screen"></div>
+
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/AP.webp" alt="Authority Partners" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-transparent to-transparent"></div>
+                    
+                    <div class="absolute top-3 left-3 bg-black/70 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10 shadow-lg">
+                        Engineering Manager
+                    </div>
+
+                    <div class="absolute top-3 right-3 bg-indigo-900/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-indigo-200 border border-indigo-500/30 shadow-lg">
+                        40+ Engineers
                     </div>
                 </div>
                 
-                <div class="p-6 flex-1 flex flex-col">
+                <div class="p-6 flex-1 flex flex-col relative z-10">
                     <div class="flex items-center gap-3 mb-3">
-                         <div class="h-6 w-12 bg-pink-900/30 text-pink-400 border border-pink-500/30 flex items-center justify-center font-bold text-[10px] rounded">VIVA</div>
-                         <span class="text-xs text-neutral-400">Bahrain</span>
+                         {/* UPDATED BADGE: Full Name */}
+                         <div class="h-6 px-2 bg-indigo-900/50 text-indigo-300 border border-indigo-500/30 flex items-center justify-center font-bold text-[10px] rounded whitespace-nowrap">Authority Partners</div>
+                         <span class="text-xs text-neutral-400">Software Development</span>
                     </div>
 
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">
-                        Roaming Settlement
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                        Engineering Division Lead
                     </h3>
-                    <p class="text-neutral-400 text-xs mb-4 leading-relaxed">
-                        Implementation of TAP/RAP file processing modules. Ensuring compliance with GSMA standards and revenue assurance logic.
+                    
+                    <p class="text-neutral-300 text-xs mb-4 leading-relaxed">
+                        Led a division of <strong class="text-orange-400">6 engineering teams</strong> delivering enterprise solutions. Managed delivery for key clients in <strong class="text-orange-400">Dental Insurance & Real Estate</strong> sectors.
                     </p>
 
                     <div class="mt-auto pt-3 border-t border-white/10 flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">Waterfall</span>
-                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">6 Months</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">Leadership</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">Agile</span>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-neutral-900 rounded-2xl border border-white/10 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
-                <div class="relative h-48 bg-neutral-800">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" alt="Meeting" class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity">
-                    <div class="absolute top-3 right-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10">
-                        Internal
+            {/* 6. OMV (Small) */}
+            <div class="bg-neutral-900/80 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden flex flex-col group hover:border-lime-500/50 transition-all duration-300 relative">
+                
+                {/* AMBIENT GLOW: Lime/Green */}
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-lime-600/20 rounded-full blur-[60px] pointer-events-none mix-blend-screen"></div>
+
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/OMV.webp" alt="OMV Bosnia" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-transparent to-transparent"></div>
+                    
+                    <div class="absolute top-3 left-3 bg-black/70 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-neutral-300 border border-white/10 shadow-lg">
+                        IT Manager
+                    </div>
+
+                    <div class="absolute top-3 right-3 bg-lime-900/60 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-lime-200 border border-lime-500/30 shadow-lg">
+                        Greenfield Entry
                     </div>
                 </div>
                 
-                <div class="p-6 flex-1 flex flex-col">
+                <div class="p-6 flex-1 flex flex-col relative z-10">
                     <div class="flex items-center gap-3 mb-3">
-                         <div class="h-6 w-12 bg-white/10 text-white border border-white/20 flex items-center justify-center font-bold text-[10px] rounded">OPS</div>
+                         <div class="h-6 w-12 bg-lime-600 text-black flex items-center justify-center font-bold text-[10px] rounded tracking-tighter">OMV</div>
+                         <span class="text-xs text-neutral-400">Energy & Retail</span>
                     </div>
 
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
-                        Process Optimization
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
+                        Market Entry Infrastructure
                     </h3>
-                    <p class="text-neutral-400 text-xs mb-4 leading-relaxed">
-                        Reorganization of internal task tracking workflows for 5 engineering teams. Introduced automated JIRA reporting for management.
+                    
+                    <p class="text-neutral-300 text-xs mb-4 leading-relaxed">
+                        Built the complete IT foundation for OMV’s entry into the BiH market. Managed integration of <strong class="text-orange-400">17 petrol stations</strong> and HQ setup from <strong class="text-orange-400">ground zero</strong>.
                     </p>
 
                     <div class="mt-auto pt-3 border-t border-white/10 flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">Scrum</span>
-                        <span class="px-2 py-1 bg-white/5 text-neutral-400 text-[10px] uppercase font-bold rounded border border-white/5">Internal</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">Greenfield</span>
+                        <span class="px-2 py-1 bg-white/5 text-neutral-300 text-[10px] uppercase font-bold rounded border border-white/10">Retail</span>
                     </div>
                 </div>
             </div>
