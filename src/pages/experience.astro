@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Professional Experience | Naim Afgan">
+  <main class="min-h-screen p-4 md:p-8 pt-32 max-w-4xl mx-auto">
+    
+    {/* HEADER SECTION */}
+    <header class="mb-16 animate-fade-in">
+      <a href="/" class="text-blue-400 hover:text-blue-300 text-sm font-mono mb-4 inline-block transition-colors">← Back to Home</a>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+        Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Journey</span>
+      </h1>
+      <p class="text-neutral-400 text-lg md:text-xl max-w-2xl leading-relaxed">
+        Over 20 years of experience orchestrating digital transformations across high-compliance industries including Fintech, Energy, Telecom, Healthcare, and Pharma.
+      </p>
+    </header>
+
+    {/* TIMELINE SECTION */}
+    {/* Vertical line: Hidden on mobile, visible on md+ */}
+    <div class="space-y-8 relative md:before:absolute md:before:inset-0 md:before:mx-auto md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-transparent md:before:via-slate-700 md:before:to-transparent">
+
+      {/* 1. AAC Mena (Current) */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        
+        {/* ICON */}
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-blue-400 relative">
+           <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-lg opacity-50"></div>
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10"><path d="M12 2v4"/><path d="m16.2 7.8 2.9-2.9"/><path d="M18 12h4"/><path d="m16.2 16.2 2.9 2.9"/><path d="M12 18v4"/><path d="m4.9 19.1 2.9-2.9"/><path d="M2 12h4"/><path d="m4.9 4.9 2.9 2.9"/></svg>
+        </div>
+
+        {/* CARD */}
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-colors shadow-xl cursor-default">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Digital AI Integration Lead</h3>
+            <span class="text-xs font-mono text-blue-300 bg-blue-900/20 px-2 py-1 rounded border border-blue-900/50 whitespace-nowrap">2025 - Present</span>
+          </div>
+          <p class="text-blue-400 text-sm font-bold tracking-wide uppercase mb-4">AAC Mena</p>
+          <ul class="space-y-2 text-neutral-300 text-sm list-disc list-outside ml-4 leading-relaxed">
+            <li>Leading AI transformation initiatives for wholesale web platforms.</li>
+            <li>Designing processes for secure AI deployment with strict data quality controls.</li>
+            <li>Coaching cross-functional teams through practical execution playbooks to ensure adoption.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* 2. Hikma Pharmaceuticals */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-green-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v6a2 2 0 0 0 2 2v0a2 2 0 0 0 2-2v-6"/><path d="M12 22v-6"/></svg>
+        </div>
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-green-500/50 transition-colors shadow-xl cursor-default">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Project Delivery Expert</h3>
+            <span class="text-xs font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded border border-white/10">2025</span>
+          </div>
+          <p class="text-green-400 text-sm font-bold tracking-wide uppercase mb-4">Hikma Pharmaceuticals</p>
+          <p class="text-neutral-300 text-sm leading-relaxed">
+            Spearheaded digital transformation in a highly regulated pharmaceutical environment, focusing on AI Risk Assessments and regulatory compliance frameworks.
+          </p>
+        </div>
+      </div>
+
+      {/* 3. APP IT (Fintech) - FIXED DATE */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-purple-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+        </div>
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-colors shadow-xl cursor-default">
+           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Senior Project Manager</h3>
+            {/* DODANO: whitespace-nowrap i shrink-0 */}
+             <span class="text-xs font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded border border-white/10 whitespace-nowrap shrink-0">2024 - 2025</span>
+          </div>
+          <p class="text-purple-400 text-sm font-bold tracking-wide uppercase mb-4">APP IT (Fintech Focus)</p>
+          <ul class="space-y-2 text-neutral-300 text-sm list-disc list-outside ml-4 leading-relaxed">
+            <li><strong>Pioneered AI Adoption:</strong> Broke new ground by integrating AI tools into the development lifecycle, significantly boosting engineering efficiency.</li>
+            <li><strong>Agile Transformation:</strong> Operationalized Agile & Scrum frameworks into daily business rhythms to improve delivery predictability.</li>
+            <li><strong>Business Development:</strong> Led strategic client engagement and managed the execution of competitive tender proposals (RFPs).</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* 4. ZIRA (Telecom) */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-orange-400">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        </div>
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-colors shadow-xl cursor-default">
+           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Project Manager</h3>
+             <span class="text-xs font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded border border-white/10">2021 - 2024</span>
+          </div>
+          <p class="text-orange-400 text-sm font-bold tracking-wide uppercase mb-4">ZIRA</p>
+          <p class="text-neutral-300 text-sm leading-relaxed">
+            Managed complex transformation projects for major Telecom clients in Italy, Bahrain, and KSA. Laid the strategic foundation for large-scale automation and analytics.
+          </p>
+        </div>
+      </div>
+
+      {/* 5. InMotion (Transport) */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-cyan-400">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+        </div>
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-colors shadow-xl cursor-default">
+           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Lead Project Manager</h3>
+             <span class="text-xs font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded border border-white/10">2020</span>
+          </div>
+          <p class="text-cyan-400 text-sm font-bold tracking-wide uppercase mb-4">InMotion</p>
+          <p class="text-neutral-300 text-sm leading-relaxed">
+             Orchestrated a major cloud application modernization for a US transport sector client, ensuring operational stability and enhancing team collaboration.
+          </p>
+        </div>
+      </div>
+
+       {/* 6. McKesson (Healthcare) */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-teal-400">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-teal-500/50 transition-colors shadow-xl cursor-default">
+           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Delivery Manager</h3>
+             <span class="text-xs font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded border border-white/10">2018 - 2020</span>
+          </div>
+          <p class="text-teal-400 text-sm font-bold tracking-wide uppercase mb-4">McKesson Corp.</p>
+          <p class="text-neutral-300 text-sm leading-relaxed">
+             Managed delivery within a high-compliance healthcare environment. Implemented formal Change Management methodologies to ensure secure system adoption.
+          </p>
+        </div>
+      </div>
+
+       {/* 7. Authority Partners */}
+      <div class="relative flex flex-col md:flex-row items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+        <div class="flex items-center justify-center w-12 h-12 mb-4 md:mb-0 rounded-full border border-slate-700 bg-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 text-indigo-400">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="w-full md:w-[calc(50%-3rem)] bg-neutral-900/80 p-6 rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-colors shadow-xl cursor-default">
+           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
+            <h3 class="font-bold text-xl text-white">Engineering Manager</h3>
+             <span class="text-xs font-mono text-neutral-400 bg-white/5 px-2 py-1 rounded border border-white/10">2016 - 2018</span>
+          </div>
+          <p class="text-indigo-400 text-sm font-bold tracking-wide uppercase mb-4">Authority Partners</p>
+          <ul class="space-y-2 text-neutral-300 text-sm list-disc list-outside ml-4 leading-relaxed">
+            <li>Led large cross-functional teams developing enterprise software for US Healthcare and Finance clients.</li>
+            <li>Championed the adoption of Scrum practices and Agile methodologies.</li>
+            <li>Launched multi-level training programs to facilitate system adoption and new workflows.</li>
+          </ul>
+        </div>
+      </div>
+    
+    </div>
+
+    {/* DOWNLOAD CV BUTTON */}
+    <div class="mt-20 mb-20 text-center">
+      <a 
+        href="/resume.pdf" 
+        target="_blank"
+        class="group inline-flex items-center gap-3 bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-slate-200 transition-all duration-300 hover:scale-105"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-y-1 transition-transform"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Download Full Resume
+      </a>
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
