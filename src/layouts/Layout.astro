@@ -8,7 +8,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Senior AI Strategy & Transformation Partner with 20+ years of experience leading complex projects in Pharma, Fintech, and Telecom." 
+  description = "Senior AI Strategy & Transformation Partner with 20+ years of experience leading complex projects in Fintech, Telecom, Energy, Healthcare, and Pharma." 
 } = Astro.props;
 ---
 
@@ -25,11 +25,11 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/hero-desktop.jpg" /> {/* Default share image */}
+    <meta property="og:image" content="/hero-desktop.jpg" />
 
     <title>{title}</title>
 
-    {/* Fonts (Optional: Inter from Google Fonts) */}
+    {/* Fonts */}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -51,9 +51,8 @@ const {
         <a href="/experience" class="menu-link text-4xl md:text-6xl font-bold text-neutral-400 hover:text-white hover:scale-105 transition-all duration-300">Experience</a>
         <a href="/about" class="menu-link text-4xl md:text-6xl font-bold text-neutral-400 hover:text-white hover:scale-105 transition-all duration-300">About</a>
         
-        {/* CONTACT LINK TO LINKEDIN */}
         <a 
-          href="https://www.linkedin.com/in/naimafgan/" 
+          href="https://www.linkedin.com/in/tvoj-profil/" 
           target="_blank"
           rel="noopener noreferrer"
           class="menu-link text-4xl md:text-6xl font-bold text-orange-500 hover:text-orange-400 hover:scale-105 transition-all duration-300"
@@ -69,8 +68,9 @@ const {
     {/* FOOTER */}
     <Footer />
 
-    {/* NAVIGATION SCRIPT */}
+    {/* NAVIGATION SCRIPT + ANIMATION OBSERVER */}
     <script>
+      // 1. Navigation Logic
       const menuToggle = document.getElementById('menu-toggle');
       const menuOverlay = document.getElementById('menu-overlay');
       const line1 = document.getElementById('line1');
@@ -82,36 +82,50 @@ const {
 
       menuToggle?.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
-
         if (isMenuOpen) {
-          // Open Menu
           menuOverlay?.classList.remove('translate-x-full');
           menuOverlay?.classList.add('translate-x-0');
-          document.body.style.overflow = 'hidden'; // Stop scrolling
-
-          // Animate Hamburger to X
+          document.body.style.overflow = 'hidden';
           line1?.classList.add('rotate-45', 'translate-y-2.5');
           line2?.classList.add('opacity-0', 'translate-x-4');
           line3?.classList.add('-rotate-45', '-translate-y-2.5');
-
         } else {
-          // Close Menu
           menuOverlay?.classList.add('translate-x-full');
           menuOverlay?.classList.remove('translate-x-0');
-          document.body.style.overflow = 'auto'; // Resume scrolling
-
-          // Animate X back to Hamburger
+          document.body.style.overflow = 'auto';
           line1?.classList.remove('rotate-45', 'translate-y-2.5');
           line2?.classList.remove('opacity-0', 'translate-x-4');
           line3?.classList.remove('-rotate-45', '-translate-y-2.5');
         }
       });
 
-      // Close menu when a link is clicked
       menuLinks.forEach(link => {
         link.addEventListener('click', () => {
           if(isMenuOpen) menuToggle?.click();
         });
+      });
+
+      // 2. Animation Logic (Samo dodaje klasu, CSS odlučuje hoće li biti animacije)
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Pokreni observer na load
+      window.addEventListener('load', () => {
+         // Samo ako je ekran širi od mobitela (opcionalno, ali CSS svakako blokira)
+         const elements = document.querySelectorAll('.fade-up');
+         elements.forEach((el) => observer.observe(el));
       });
     </script>
 
@@ -119,7 +133,6 @@ const {
 </html>
 
 <style is:global>
-  /* Base font settings if you want to enforce specific fonts globally */
   :root {
     --font-body: 'Inter', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
@@ -127,9 +140,38 @@ const {
   
   html {
     font-family: var(--font-body);
+    scroll-behavior: smooth;
   }
   
   code, pre, .font-mono {
     font-family: var(--font-mono);
+  }
+
+  /* --- INTELIGENTNA ANIMACIJA --- */
+  
+  /* DEFAULT (MOBITEL): Nema animacije, sve je odmah vidljivo (opacity: 1) */
+  .fade-up {
+    opacity: 1; 
+    transform: none;
+  }
+
+  /* DESKTOP (min-width: 768px): Uključujemo animaciju */
+  @media (min-width: 768px) {
+    .fade-up {
+      opacity: 0; /* Počinje nevidljivo samo na desktopu */
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .fade-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delay samo za desktop */
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
   }
 </style>
